@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4827fdc10e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+          <form class="account">
+            <h2>Create an Account</h2>
+            
+            <div class="row">
+                
+                <label>First Name</label>
+                <input type="text" name="firstname" required autofocus>
+                
+            </div>
+            <div class="row">
+                <label>Last Name</label>
+                <input type="text" name="lastname">
+                
+            </div>
+        
+            <div class="row">
+                <label for="mail-input">E-mail</label>
+                <input type="email" name="email" id="mail-input">
+                
+            </div>
+
+            <p>We'll never share your email with anyone else.  
+            </p>
+
+            <div class="row">
+            <label>
+                <input type="radio" name="gender"checked>Male
+                <span></span>
+            </label>
+            <label>
+                <input type="radio" name="gender">Female
+                <span></span>
+            </label>
+            </div>
+
+            <div class="row">
+                <label>Country
+                    <select name="country">
+                            <option value="Spain">Spain</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="France">France</option>
+                    </select>
+                </label>
+                <label>City
+                    <input type="text" name="city">
+                </label>
+            </div>
+
+            <button>Sign Up</button>
+            <p>By clicking the 'Sign Up' button, you confirm that you accept our Terms of Use and Privacy Policy.</p>
+            <hr>
+
+            <div class="row">
+                <p>Have an account? <a href="loginpage"> Log In</a></p>
+            </div>
+          </form>
+
+
+
+
+          <form class="profile">
+            <h2>Profile</h2>
+            <div class="row">
+                <img src="assets/📷 Image.png" alt="Photo">
+                <input type="file" name="photo" id="photo">
+                <button><i class="fa-solid fa-trash"></i></button>
+            </div>
+            <label for="photo">Up to 1 MB (300x300 px)</label>
+            <div class="row">
+                <label>Name
+                <input type="text" name="name">
+                </label>
+                <label>E-mail
+                <input type="email" name="email">
+                </label>
+            </div>
+            <div class="row">
+                <label>Country
+                    <select name="country">
+                        <option value="Spain">Spain</option>
+                        <option value="Ukraine">Ukraine</option>
+                        <option value="France">France</option>
+                    </select>
+                    </label>
+                    <label>City
+                    <input type="text" name="city">
+                    </label>
+            </div>
+            <div class="row">
+                <label>Zip-Code
+                <input type="text" name="Zip-Code">
+                </label>
+                <label>Phone Number
+                <input type="number" name="phone">
+                </label>
+            </div>
+            <button>Update</button>
+
+
+          </form>
+        </div>
+    </main>
+    
+</body>
+</html>

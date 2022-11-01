@@ -1,0 +1,41 @@
+h2 {
+font-family: 'Roboto', sans-serif;
+font-weight: 500;
+font-size: 24px;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 15px; 
+    margin: 20px;
+    background-color:rgba(239, 239, 240,1) ;
+}
+input {
+  border:2px solid rgba(239, 239, 240,1);
+  padding:10px;
+  border-radius:10px;
+}
+input:focus {
+  outline:none;
+  border:2px solid #007BFF;
+}
+
+.account, .profile{
+  background-color: #ffffff;
+  border-radius: 10px;
+  width: 570px;
+  height: 590px;
+  padding: 30px;
+}
+
+
+
+
+
+
+.container {
+  display:flex;
+}
+form {
+  margin: 20px;
+}
