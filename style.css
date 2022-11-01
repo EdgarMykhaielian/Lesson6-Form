@@ -136,10 +136,20 @@ input[type='radio'], .radio_wrapper label{
   display: none;
 }
 
+
+
 .file {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
+
+
+
+
+
+
+
+
 
 .file label {
   position: absolute;
@@ -175,6 +185,7 @@ input[type='radio'], .radio_wrapper label{
 .input_with_image {
   position: relative;
   display: flex;
+  flex-direction: column;
 }
 
 .filesize {
@@ -182,6 +193,7 @@ input[type='radio'], .radio_wrapper label{
 font-weight: 400;
 font-size: 13px;
 color: #969696;
+margin-top:7px;
 }
 
 .update {
