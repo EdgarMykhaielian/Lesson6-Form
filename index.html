@@ -1,121 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/4827fdc10e.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/4827fdc10e.js" crossorigin="anonymous"></script>
+
+  <style>
+    select:invalid {
+      color: gray;
+    }
+  </style>
+
 </head>
+
 <body>
-    <main>
-        <div class="container">
-          <form class="account">
-            <h2>Create an Account</h2>
-            
-            <div class="row">
-                
-                <label>First Name</label>
-                <input type="text" name="firstname" required autofocus>
-                
-            </div>
-            <div class="row">
-                <label>Last Name</label>
-                <input type="text" name="lastname">
-                
-            </div>
-        
-            <div class="row">
-                <label for="mail-input">E-mail</label>
-                <input type="email" name="email" id="mail-input">
-                
-            </div>
+  <div class="container">
 
-            <p>We'll never share your email with anyone else.  
-            </p>
+    <form class="account">
+      <h2>Create an Account</h2>
 
-            <div class="row">
-            <label>
-                <input type="radio" name="gender"checked>Male
-                <span></span>
-            </label>
-            <label>
-                <input type="radio" name="gender">Female
-                <span></span>
-            </label>
-            </div>
-
-            <div class="row">
-                <label>Country
-                    <select name="country">
-                            <option value="Spain">Spain</option>
-                            <option value="Ukraine">Ukraine</option>
-                            <option value="France">France</option>
-                    </select>
-                </label>
-                <label>City
-                    <input type="text" name="city">
-                </label>
-            </div>
-
-            <button>Sign Up</button>
-            <p>By clicking the 'Sign Up' button, you confirm that you accept our Terms of Use and Privacy Policy.</p>
-            <hr>
-
-            <div class="row">
-                <p>Have an account? <a href="loginpage"> Log In</a></p>
-            </div>
-          </form>
-
-
-
-
-          <form class="profile">
-            <h2>Profile</h2>
-            <div class="row">
-                <img src="assets/📷 Image.png" alt="Photo">
-                <input type="file" name="photo" id="photo">
-                <button><i class="fa-solid fa-trash"></i></button>
-            </div>
-            <label for="photo">Up to 1 MB (300x300 px)</label>
-            <div class="row">
-                <label>Name
-                <input type="text" name="name">
-                </label>
-                <label>E-mail
-                <input type="email" name="email">
-                </label>
-            </div>
-            <div class="row">
-                <label>Country
-                    <select name="country">
-                        <option value="Spain">Spain</option>
-                        <option value="Ukraine">Ukraine</option>
-                        <option value="France">France</option>
-                    </select>
-                    </label>
-                    <label>City
-                    <input type="text" name="city">
-                    </label>
-            </div>
-            <div class="row">
-                <label>Zip-Code
-                <input type="text" name="Zip-Code">
-                </label>
-                <label>Phone Number
-                <input type="number" name="phone">
-                </label>
-            </div>
-            <button>Update</button>
-
-
-          </form>
+      <div class="row">
+        <div class="input_wrapper">
+          <label>First Name</label>
+          <input type="text" name="firstname" required autofocus>
         </div>
-    </main>
-    
+
+        <div class="input_wrapper">
+          <label>Last Name</label>
+          <input type="text" name="lastname">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input_wrapper">
+          <label>E-mail</label>
+          <input type="email" name="email" id="email">
+          <span class="email_hint">We'll never share your email with anyone else.
+          </span>
+        </div>
+      </div>
+
+
+      <div class="row radio_wrapper">
+        <input type="radio" id="male" name="gender" checked>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" checked>
+        <label for="female">Female</label>
+      </div>
+
+      <div class="row">
+        <div class="input_wrapper">
+          <label>Country</label>
+          <select name="country" required>
+            <option value="" disabled selected>Select</option>
+            <option value="Spain">Spain</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="France">France</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+          </select>
+        </div>
+        <div class="input_wrapper">
+          <label>City</label>
+          <input type="text" name="city">
+        </div>
+      </div>
+
+      <button class="signup">Sign Up</button>
+
+      <p class="privacy">
+        By clicking the 'Sign Up' button, you confirm that you accept our<br>
+        <a href="privacypage">Terms of Use</a> and <a href="privacypage">Privacy Policy</a>
+      </p>
+      <hr>
+
+      <div class="row login">
+        <span>Have an account?</span>
+        <a class="login" href="loginpage">Log In</a>
+      </div>
+    </form>
+
+    <!-- End of first form and beginning of second -->
+
+
+    <form class="profile">
+      <h2>Profile</h2>
+      <div class="row">
+        <img src="assets/📷 Image.png" alt="Photo">
+        <!-- <input type="file" name="photo" id="photo">
+                <label for="photo" class="custom-file"></label> -->
+                <div class="file row">
+                  <div class="input_with_image">
+                    <div>
+                      <input type="text" />
+                      <label for="file"
+                        ><svg width="32" height="32" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M4.78001 3.33333L6.00001 2H10L11.22 3.33333H13.3333C14.0667 3.33333 14.6667 3.93333 14.6667 4.66667V12.6667C14.6667 13.4 14.0667 14 13.3333 14H2.66668C1.93334 14 1.33334 13.4 1.33334 12.6667V4.66667C1.33334 3.93333 1.93334 3.33333 2.66668 3.33333H4.78001ZM4.66668 8.66667C4.66668 10.5067 6.16001 12 8.00001 12C9.84001 12 11.3333 10.5067 11.3333 8.66667C11.3333 6.82667 9.84001 5.33333 8.00001 5.33333C6.16001 5.33333 4.66668 6.82667 4.66668 8.66667ZM8.00001 10.8C9.17822 10.8 10.1333 9.84487 10.1333 8.66667C10.1333 7.48846 9.17822 6.53333 8.00001 6.53333C6.8218 6.53333 5.86668 7.48846 5.86668 8.66667C5.86668 9.84487 6.8218 10.8 8.00001 10.8Z"
+                            fill="#969696"
+                          />
+                        </svg>
+                      </label>
+                    </div>
+                    
+                      <span for="photo" class="filesize">Up to 1 MB (300x300 px)</span>
+                    
+                  </div>
+                  <input type="file" name="file" id="file" />
+                  <button class="trash">
+                    <svg width="24" height="24" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M4.00001 12.6667C4.00001 13.4 4.60001 14 5.33334 14H10.6667C11.4 14 12 13.4 12 12.6667V4.66667H4.00001V12.6667ZM12.6667 2.66667H10.3333L9.66668 2H6.33334L5.66668 2.66667H3.33334V4H12.6667V2.66667Z"
+                        fill="#969696"
+                      />
+                    </svg>
+                  </button>
+                </div>
+      </div>
+
+
+
+
+
+
+      <div class="row">
+        <div class="input_wrapper">
+          <label class="firstrow">Name</label>
+          <input type="text" name="name">
+        </div>
+        <div class="input_wrapper">
+          <label class="firstrow">E-mail</label>
+          <input type="email" name="email">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input_wrapper">
+          <label>Country</label>
+          <select name="country" required>
+            <option value="" disabled selected>Select</option>
+            <option value="Spain">Spain</option>
+            <option value="Ukraine">Ukraine</option>
+            <option value="France">France</option>
+            <option value="United Kingdom">United Kingdom</option>
+            <option value="United States">United States</option>
+          </select>
+        </div>
+        <div class="input_wrapper">
+          <label>City</label>
+          <input type="text" name="city">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input_wrapper">
+          <label>Zip-Code</label>
+          <input type="text" name="Zip-Code">
+        </div>
+        <div class="input_wrapper">
+          <label>Phone Number</label>
+          <input type="tel" name="phone">
+        </div>
+      </div>
+      <button class="update">Update</button>
+
+
+    </form>
+  </div>
+
+
 </body>
+
 </html>
